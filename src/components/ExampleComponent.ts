@@ -1,5 +1,6 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
+//Todo: Add props in component decorator?
 @Component
 export default class ExampleComponent extends Vue {
   @Prop({ default: () => [] })
