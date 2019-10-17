@@ -1,20 +1,22 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <ExampleComponent :frameworks="frameworks" />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import ExampleComponent from './components/ExampleComponent.vue';
 
 @Component({
   components: {
-    HelloWorld,
+    ExampleComponent,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  private frameworks: string[] = ['React', 'Angular', 'Vue', 'Svelte', 'Bootstrap', 'Tailwind', 'Knockout', '.NET', 'Ruby-on-Rails'];
+}
 </script>
 
 <style lang="scss">
