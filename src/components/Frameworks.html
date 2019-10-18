@@ -1,0 +1,14 @@
+<vue-fragment>
+  <ul class="list">
+    <template v-for="(framework, i) in items">
+      <li v-if="allShown || (!allShown && i < 5)" class="list__item">
+        {{framework}}
+      </li>
+    </template>
+  </ul>
+
+  <button @click="toggle">
+    <span v-if="allShown">Toon eerste 5 items</span>
+    <span v-if="!allShown">Toon alle items</span>
+  </button>
+</vue-fragment>
