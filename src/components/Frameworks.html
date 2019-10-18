@@ -8,7 +8,6 @@
   </ul>
 
   <button @click="toggle">
-    <span v-if="allShown">Toon eerste 5 items</span>
-    <span v-if="!allShown">Toon alle items</span>
+    {{ (allShown) ? "Toon eerste 5" : "Toon alle" }}
   </button>
 </vue-fragment>
